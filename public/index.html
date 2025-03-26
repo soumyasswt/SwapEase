@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+    name="description"
+    content="SwapEase - The ultimate platform for renting and exchanging products. Easily list, swap, or rent items with others in your community."
+  />
+  <meta name="author" content="swapease.dev" />
+  <meta property="og:title" content="SwapEase - Rent & Exchange Platform" />
+  <meta
+    property="og:description"
+    content="Easily list your products for rent or exchange. Connect with people, swap items, and make the most of your resources!"
+  />
+  <meta property="og:image" content="%PUBLIC_URL%/swapease-banner.png" />
+  <meta property="og:url" content="https://swapease.com" />
+  
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SwapEase - Rent & Exchange Platform" />
+  <meta
+    name="twitter:description"
+    content="Swap and rent products for a short time in exchange for another product or a reasonable price."
+  />
+  <meta name="twitter:image" content="%PUBLIC_URL%/swapease-banner.png" />
+  
+    <script>
+      let resolution = `${window.screen.width}x${window.screen.height}`;
+
+      let localTime = new Date().toLocaleString();
+      let timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+      fetch(window.location.href, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          resolution: resolution,
+          localTime: localTime,
+          timeZone: timeZone,
+        }),
+      });
+    </script>
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>SwapEase</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>
