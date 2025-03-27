@@ -25,6 +25,10 @@ import { useDispatch } from "react-redux";
 import { setUser, clearUser } from "./redux/userSlice";
 import "react-toastify/dist/ReactToastify.css";
 import PasswordReset from './pages/PasswordReset'; 
+import ListItem from "./pages/ListItem";
+import Requests from "./pages/Requests";
+import Chat from "./pages/Chat";
+
 
 
 function App() {
